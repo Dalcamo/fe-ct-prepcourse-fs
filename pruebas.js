@@ -1,23 +1,32 @@
-function continueStatement(num) {
-   // Iterar en un bucle aumentando en 2 el número recibido hasta un límite de 10 veces.
-   // Guardar cada nuevo valor en un array y retornarlo.
-   // Cuando el número de iteraciones alcance el valor 5, no se suma ese caso y
-   // se continua con la siguiente iteración.
-   // [PISTA]: utiliza el statement 'continue'.
+function agregarMetodoCalculoDescuento(objetoProducto) {
+   // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
+   // Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
+   // El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
+   // Luego debes restar del precio total del producto ese valor de descuento.
+   // Retornar el precio final.
+   // Ejemplo:
+   // Precio ---> 10
+   // PorcentajeDeDescuento ---> 0.2
+   // Precio final ---> 8
    // Tu código:
-   let newArray =[];
    
-   for(var i=0; i < 10; i++){
-      
-      if(i == 5) continue; 
-      else {
-         num = num + 2;
-         newArray.push(num);
-      }             
-      
-   }
-   console.log(newArray);
-   return newArray;
+   objetoProducto.calcularPrecioDescuento = function(){
+      console.log(objetoProducto.precio);
+      let precioDescuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
+      return precioFinal;   
+   }   
+   return objetoProducto;
+   
 }
 
-continueStatement(-4)
+const storeItem = {
+   precio: 80,
+   porcentajeDeDescuento: 0.1,
+};
+const storeItem2 = {
+   precio: 5,
+   porcentajeDeDescuento: 0.5,
+};
+
+const objeto1 = agregarMetodoCalculoDescuento(storeItem);
+console.log(objeto1.calcularPrecioDescuento(storeItem));
