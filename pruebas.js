@@ -1,32 +1,35 @@
-function agregarMetodoCalculoDescuento(objetoProducto) {
-   // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
-   // Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
-   // El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
-   // Luego debes restar del precio total del producto ese valor de descuento.
-   // Retornar el precio final.
-   // Ejemplo:
-   // Precio ---> 10
-   // PorcentajeDeDescuento ---> 0.2
-   // Precio final ---> 8
-   // Tu código:
-   
-   objetoProducto.calcularPrecioDescuento = function(){
-      console.log(objetoProducto.precio);
-      let precioDescuento = objetoProducto.precio * objetoProducto.porcentajeDeDescuento;
-      return precioFinal;   
-   }   
-   return objetoProducto;
+class Persona {
+   // Crea el constructor de la clase "Persona".
+   // Debe tener las propiedades: "nombre", "apellido", "edad" y "domicilio".
+   // Debe tener un método llamado "detalle" que nos devuelva un objeto con las propiedades de la persona y
+   // sus valores.
+   constructor(nombre, apellido, edad, domicilio){
+      this.nombre = nombre;
+      this.apellido = apellido;
+      this.edad = edad;
+      this.domicilio = domicilio;
+   }
+   detalle(){
+      let persona = {
+         nombre: this.nombre,
+         apellido: this.apellido,
+         edad: this.edad,
+         domicilio: this.domicilio,
+      }
+      return persona;
+   }    
    
 }
 
-const storeItem = {
-   precio: 80,
-   porcentajeDeDescuento: 0.1,
-};
-const storeItem2 = {
-   precio: 5,
-   porcentajeDeDescuento: 0.5,
-};
 
-const objeto1 = agregarMetodoCalculoDescuento(storeItem);
-console.log(objeto1.calcularPrecioDescuento(storeItem));
+
+function crearInstanciaPersona(nombreInstancia, nombre, apellido, edad, domicilio) {
+   // En este ejercicio debes crear una instancia de la clase construida en el ejercicio anterior.
+   // Recibirás las propiedades por parámetro.
+   // Retornar la instancia creada.
+   // Tu código:
+   nombreInstancia = new Persona (nombre,apellido,edad,domicilio);
+   return nombreInstancia;
+}
+
+console.log(crearInstanciaPersona("instancia1","Alejo", "Cardona", 37,"Calle falsa 123"));
