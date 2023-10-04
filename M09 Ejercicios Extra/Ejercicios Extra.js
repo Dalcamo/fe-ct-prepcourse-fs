@@ -92,12 +92,13 @@ function capToFront(string) {
       let letras = ["a","b","c"];
       let array = string.split("");
       let arrayCopy = [];
-      array.forEach((element,index) => {
-         console.log(element);
-         if(!letras.includes(element)){         
-            arrayCopy.push(element);
-         }
-      });
+      arrayCopy = array.filter(letra => !letras.includes(letra))
+      // array.forEach((element,index) => {
+      //    console.log(element);
+      //    if(!letras.includes(element)){         
+      //       arrayCopy.push(element);
+      //    }
+      // });
    
       return (arrayCopy.join(""));
    }

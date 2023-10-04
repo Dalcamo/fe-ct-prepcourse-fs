@@ -131,7 +131,7 @@ function sumarLikesDeUsuario(objetoUsuario) {
    let totalLikes = 0;
    array = objetoUsuario.posts;
    array.forEach(post => {
-      totalLikes = totalLikes + post.likes
+      totalLikes = totalLikes + post.likes;
    });
    return totalLikes;
 
