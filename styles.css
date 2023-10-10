@@ -32,6 +32,7 @@ table {
     padding:20px 10px;
     background-color: #7D7C7C;
     border-radius: 10px;
+    transition: 0.3s ease-in-out;  
 }
 
 header {
@@ -56,6 +57,7 @@ nav {
 ul {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;  
     height:auto;
     width: 100%;
     margin: 0;
@@ -124,19 +126,57 @@ main img{
   .galeria img{
     object-fit: cover;
     height: 160px;
+    transition: 0.5s ease-in-out;  
   }
 
-.visit_activities ol,li {
-    display: block;
-    justify-content: left;    
+.visit_activities  ol > li {
+    display: block;    
+    background-color: #4F709C;    
+    list-style-type: decimal;  
+    color: white;  
+    border-radius: 5px;
 
 } 
 
 .visit_activities ul {
-    display: block;
-    justify-content: left;    
-
+    display: flex;    
+    border: 1px solid #ccc;
+    height: auto;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0;    
+    justify-content: left;       
+    flex-direction: column; 
+    align-items: flex-start;
 } 
 
+.visit_activities li {
+    list-style-type: decimal;
+  }
 
+
+  .form {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    border: #213555 solid 2px;
+    padding: 50px;
+    flex-direction: column;
+    border-radius: 10px;
+    
+    
+  }
+
+  .form button{
+    display: flex;
+    padding: 10px 10px;
+    width: 30%;
+    justify-content: center;
+
+  }
+
+  main>img {
+    height: 60vh;
+    width: auto;
+  }
 
