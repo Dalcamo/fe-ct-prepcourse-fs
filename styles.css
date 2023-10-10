@@ -180,3 +180,17 @@ main img{
     width: auto;
   }
 
+  .images_index {
+    display: flex;  
+    width: 80%;  
+    margin: 0 auto;
+    justify-content: center;
+
+  }
+
+  .images_index img{
+    padding: 0 5%;
+    border-radius: 20px;
+    width: 45%;
+  }
+
