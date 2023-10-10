@@ -1,13 +1,13 @@
-function tablaDelSeis() {
-   // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
-   // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
-   // Tu código:
-   let tablaDelSeis = [];
-   let valor = 6;
-   for(var i = 0; i<=10; i++){      
-      tablaDelSeis.push(valor*i);      
-   }
-   return tablaDelSeis;
+var string = "Alejanbdrocardonac"
+var prohibidas = ["a","b","c","A","B","C"]
+
+ function quitarAbc(string) {
+   stringToArray = string.split("");
+   console.log(stringToArray);
+   var arraySinProhibidas = stringToArray.filter((letra)=> (!prohibidas.includes(letra)));     
+   string = arraySinProhibidas.join("");
+   console.log(string);
 }
 
-console.log(tablaDelSeis());
+
+quitarAbc("Alejandro Cardona");
